@@ -8,12 +8,12 @@ var force_explode_timer = LIFETIME_DURATION
 
 func _physics_process(delta):
 	force_explode_timer -= delta
-	if(force_explode_timer < 0):
+	if force_explode_timer < 0:
 		explode()
 	
 	var collision = move_and_collide(linear_velocity * delta)
-	if(collision):
-		if(collision.collider.name == "Player"):
+	if collision:
+		if collision.collider.name == "Player":
 			emit_signal("hit_player")
 			
 		explode()

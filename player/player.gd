@@ -17,7 +17,7 @@ func _ready():
 func on_hit():
 	print("ouch")
 	health -= 1
-	if(0 < health):
+	if 0 < health:
 		emit_signal("health_change")
 	else:
 		emit_signal("death")

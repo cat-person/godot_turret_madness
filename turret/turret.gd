@@ -12,14 +12,10 @@ func _physics_process(delta):
 	look_at(player_position)
 	
 	pseudo_timer += delta
-	if(pseudo_timer > RELOAD_TIME):
+	if pseudo_timer > RELOAD_TIME:
 		shoot()
 		pseudo_timer -= RELOAD_TIME
 	
 func shoot():
-	# var bullet = bullet_scene.instance()
 	emit_signal("shoot", position + Vector2(50, 0).rotated(rotation), Vector2(300, 0).rotated(rotation))
-	# bullet.position = position + Vector2(50, 0).rotated(rotation) 
-	# bullet.linear_velocity = Vector2(300, 0).rotated(rotation)
-	# get_parent().add_child(bullet)
 	
