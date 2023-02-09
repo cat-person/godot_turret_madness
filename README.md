@@ -11,4 +11,4 @@ Renderer: GLES 2
 
 ## Screenshots
 
-(screenshots/screenshot.png)
+[Screenshot:](screenshots/screenshot.png)
