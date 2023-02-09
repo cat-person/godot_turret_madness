@@ -23,7 +23,6 @@ func _enter_tree():
 		var turret = turret_scene.instance()
 		turret.add_to_group("turret")
 		turret.connect("shoot", self, "on_shot")
-		var potential_position = null
 		turret.position = find_position_for_turret(10)
 		add_child(turret)
 		
@@ -52,7 +51,6 @@ func _physics_process(delta):
 		var turret = turret_scene.instance()
 		turret.add_to_group("turret")
 		turret.connect("shoot", self, "on_shot")
-		var potential_position = null
 		turret.position = find_position_for_turret(10)
 		add_child(turret)
 		add_turret_pseudo_timer += NEXT_TURRET_DELAY
